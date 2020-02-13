@@ -37,6 +37,7 @@ window.addEventListener("load", () => {         // Posponer la carga de los scri
     
         boton.addEventListener("click", function(){
         cambiarColor();
+        this.style.border = "10px solid black";
         })
     
     
