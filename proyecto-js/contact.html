@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Completo JS - 1</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link id="theme" rel="stylesheet" href="css/green.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="selector">
+        <div id="green">
+
+        </div>
+        <div id="red">
+            
+        </div>
+        <div id="blue">
+
+        </div>
+    </div>
+
+    <section id="global">        
+        <!-- Cabecera del Sitio -->
+        <header>
+            <h1 id="logo">
+                Proyecto JS
+            </h1>
+            <div class="clearfix"></div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="reloj.html">Reloj</a></li>
+                    <li><a href="about.html">Sobre Mi </a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenido -->
+        <section id="content">
+            <div id="box">
+                <h2>Contacto</h2>
+                <form action="" method="POST" id="form_contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric">
+
+                    <label for="surname">Apellido</label>
+                    <input type="text" name="surname" data-validation="alphanumeric">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" data-validation="email">
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de Nacimiento</label>
+                    <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy">
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number">
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <aside id="aside">
+                <div id="about">
+                    <h4><span> ¿Quien Soy?</span></h4>
+                    <img src="img/caracol.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut dolorem veniam, necessitatibus minus amet deserunt, voluptatum ullam sit numquam similique molestias ratione consequatur quisquam. Nobis similique facere voluptas sunt exercitationem?</p>
+                </div>
+                <div id="login">
+                    <h4><span> Identificate</span></h4>
+                    
+                    <form>
+                        <label name="name">Nombre</label>
+                        <input type="text"  id="form_name" name="nombre">
+    
+                        <label name="name">Email</label>
+                        <input type="email" name="email">
+    
+                        <label name="name">Contraseña</label>
+                        <input type="password" name="password">
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </aside>
+            <div class="clearfix"></div>
+        </section>
+    </section>
+
+    <footer id="footer">
+        Master en JS de Romero Jose
+
+        <a href="#" class="subir"> Ir Arriba</a>
+    </footer>
+
+</body>
+</html>
