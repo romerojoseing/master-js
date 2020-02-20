@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo jQuery</title>
+
+    <!-- Agregando jQuery al Sitio Web --> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/01-selectores.js"></script>
+    <style>
+        .zebra{
+           border: 2px solid black; 
+        }
+
+        .grande{
+            font-size: 30px;
+        }
+
+        .margen-superior{
+            margin-top: 45px;
+            display: block;
+        }
+
+        .resaltado{
+            border-bottom: 2px solid green;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Aprendiendo jQuery en el Master de JS</h1>
+
+    <ul>
+        <li><a href="https://www.google.com/" title="google">Google</a></li>
+        <li><a href="https://www.facebook.com/" title="facebook">Facebook</a></li>
+    </ul>
+
+    <p id="rojo" class="sin_borde">Ejericios de jQuery</p>
+    <p id="amarillo" class="zebra">Ejericios de JS</p>
+    <p id="verde" class="sin_borde">Ejericios de CSS</p>
+    <p class="zebra">Ejericios de HTML</p>
+
+    <div id="caja">
+        <p>Hola soy una caja</p>
+        <ul>
+            <li><a href="#">Elemento 1</a></li>
+            <li><a href="#" class="resaltado">Elemento 2</a></li>
+        </ul>
+        <span class="resaltado">Elemento 3</span>
+    </div>
+</body>
+</html>
