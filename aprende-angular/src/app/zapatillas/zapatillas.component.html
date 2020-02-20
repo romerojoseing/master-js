@@ -1,0 +1,65 @@
+
+<h2>{{titulo}}</h2>
+
+<p>Añadir Marca</p>
+<p>
+    <input type="text" [(ngModel)]="mi_marca">
+    <button (click)="getMarca()">Mostrar Marca</button>
+    <button (click)="addMarca()">Agregar Marca</button>
+</p>
+<i>{{mi_marca}}</i>
+
+<h3>Compra las Zapatillas de las Mejores Marcas</h3>
+<ul>
+    <li *ngFor="let marca of marcas; let index = index">
+        {{index + '-' + marca}}
+        <button (click)="borrarMarca(index)">Borrar</button>
+    </li>
+</ul>
+<br>
+
+<h3>Ofertas en Modelos</h3>
+<ul>
+    <!-- Mostrar Zapatilas desde archivos-->
+    <!-- La Directiva *ngFor es para hacer un bucle -->
+    <li *ngFor="let deportiva of zapatillas">
+        <span [ngStyle]="{
+            'text-decoration': !deportiva.stock ? 'line-through' : 'none'
+        }">
+            {{deportiva.nombre}} - 
+            <strong
+                [class.altoPrecio]="deportiva.precio >= 80"            
+                [ngClass]="{
+                    'fondoRojo': deportiva.precio > 100,
+                    'subrayado': deportiva.marca == 'Nike'
+                }"
+            >{{deportiva.precio}} $</strong>
+        </span>
+
+        <!-- Las directivas siempre se usan con un * delante -->
+        <!-- La Directiva *ngIf es para hacer un condicional -->
+        <span *ngIf="deportiva.precio <= 80" [style.background]="deportiva.precio <= 80 ? 'green' : 'transparent'"
+            [style.color]="deportiva.precio <= 80 ? 'white' : 'black'"
+            [style.padding]="deportiva.precio <= 80 ? '2px' : '0px'"
+            [style.margin]="deportiva.precio <= 80 ? '5px' : '0px'"
+            [style.border-radius]="deportiva.precio <= 80 ? '5px' : '0px'">¡En Oferta!</span>
+    </li>
+</ul>
+<br>
+<h3>El color de la Mayoria de nuestras zapatilas es: </h3>
+<input type="text" [(ngModel)]="color">
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        El color Predominante es el <span [ngStyle]="{'background': color}"> Amarillo</span>
+    </li>
+    <li *ngSwitchCase="'red'">
+        El color Predominante es el <span [ngStyle]="{'background': color}">Rojo</span>
+    </li>
+    <li *ngSwitchCase="'blue'">
+        El color Predominante es el <span [ngStyle]="{'background': color}">Azul</span>
+    </li>
+    <li *ngSwitchCase="'orange'">
+        El color Predominante es el <span [ngStyle]="{'background': color}">Naranja</span>
+    </li>
+
+</ul>
