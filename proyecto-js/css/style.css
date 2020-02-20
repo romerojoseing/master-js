@@ -1,0 +1,253 @@
+*{
+    margin: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+#global{
+    background-color: white;
+    width: 65%;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 40px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#logo{
+    font-family: Verdana, Arial;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    width: 380px;
+    height: 80px;
+    text-transform: uppercase;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#menu{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333333;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#menu ul{
+    line-height: 46px;
+ 
+}
+
+#menu ul li{
+    line-height: 46px;
+    display: inline-block;
+}
+
+#menu ul li a{
+    color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: block;
+}
+
+#posts{
+    width: 65%;
+    float: left;
+    font-family: Arial, Helvetica;
+}
+
+.post{
+    padding: 5px;
+}
+
+.post h2{
+    font-size: 30px;
+    color: #333333;
+}
+
+.post .date{
+    display: block;
+    color: gray;
+    margin-top: 5px;
+}
+
+.post p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.boton{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin-top: 10px;
+    width: 65px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#aside{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 30%;
+    float: right;
+}
+
+#aside h4{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 10px;
+    color: #333333;
+    background: url(../img/lines.png);
+}
+
+#aside h4 span{
+    background: white;
+    padding: 5px;
+}
+
+#aside img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#aside p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form select,
+form input[type="number"]{
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #cccccc;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+form input[type="submit"]{
+    background: #eeeeee;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+#footer{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    height: 45px;
+    margin: 0px auto;
+    width: 65%;
+    line-height: 45px;
+    background-color: rgba(51, 51, 51, 0.7);
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.bx-wrapper, .bx-viewport{
+    height: 250px !important;
+}
+
+#selector{
+    position: fixed;
+    top: 40%;
+    width: 45px;
+    background: rgba(51, 51, 51, 0.7);
+    height: 100px;
+}
+
+#green,
+#red,
+#blue{
+    display: block;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#green{
+    background: #235e3d;
+}
+
+#red{
+    background-color: #ca3413;
+}
+
+#blue{
+    background-color: #1f87c4;
+}
+
+.subir{
+    color: white;
+    display: block;
+    text-decoration: none;
+    float: right;
+    padding-right: 20px;
+}
+
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 20px;
+}
+
+#box h2{
+    font-size: 30px;
+    color: #333333;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+#reloj{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    text-align: center;
+    border: 5px solid #333333;
+    padding: 30px;
+
+}
+
+#form_contact{
+    width: 50%;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form_contact label{
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+}
+
+.form-error{
+    color: white;
+    background: red;
+    float: left;
+    font-size: 13px;
+    padding: 10px;
+    width: 80%;
+    margin-top: 20px;
+}
