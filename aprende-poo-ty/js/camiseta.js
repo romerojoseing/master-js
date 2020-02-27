@@ -40,6 +40,7 @@ var Camiseta = /** @class */ (function () {
     };
     return Camiseta;
 }());
+
 // Clase Hija
 var Sudadera = /** @class */ (function (_super) {
     __extends(Sudadera, _super);
