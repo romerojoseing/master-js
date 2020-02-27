@@ -41,6 +41,7 @@ export class ExternoComponent implements OnInit {
       }
     );
   }
+  
   onSubmit(form){
     this._peticionesService.addUser(this.new_user).subscribe(
       response =>{
