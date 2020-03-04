@@ -1,0 +1,50 @@
+<div class="container" *ngIf="project">
+    <h2>{{title}}</h2>
+
+    <div class="message success" *ngIf="status == 'success'">
+        El proyecto se ha creado correctamente, puedes <a [routerLink]="['/proyecto', save_project._id]">verlo aquí</a>
+    </div>
+
+    <div class="message success" *ngIf="status == 'failed'">
+        El proyecto no se ha podido crear
+    </div>
+
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+            <span *ngIf="name.touched && !name.valid"> Nombre Obligatorio </span>
+        </p>
+        <p>
+            <label for="description">Descripcion</label>
+            <textarea name="description" #description="ngModel" [(ngModel)]="project.description"  required></textarea>
+            <span *ngIf="description.touched && !description.valid"> Descripcion Obligatorio </span>
+        </p>
+        <p>
+            <label for="category">Categoria</label>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category"  required>
+            <span *ngIf="category.touched && !category.valid"> Categoria Obligatorio </span>
+        </p>
+        <p>
+            <label for="year">Año</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year">
+        </p>
+        <p>
+            <label for="langs">Lenguajes</label>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs"  required>
+            <span *ngIf="langs.touched && !langs.valid"> Lenguaje Obligatorio </span>
+        </p>
+        <p>
+            <label for="image">Imagen</label>
+            <span class="image" *ngIf="project.image" style="float:none;">
+				<img src="{{url+'get-image/'+project.image}}" style="width:100px; height: 100px;"/>
+			</span><br/>
+            <input type="file" name="image" placeholder="Subir Imagen" (change)="fileChangeEvent($event)">
+        </p>
+
+        <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid">
+        
+    </form>
+
+</div>
