@@ -569,4 +569,3 @@ window.addEventListener("load", () => {         // Posponer la carga de los scri
         });
 
 });
-
