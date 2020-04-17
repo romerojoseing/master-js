@@ -20,7 +20,7 @@ cajas.style.padding = "20px";
 // Conseguir elementos por su etiqueta
 var todosLosDivs = document.getElementsByTagName("div");
 
-var contenido = todosLosDivs[2].innerHTML;
+var contenido = todosLosDivs[0].innerHTML;
 
 var valor;
 

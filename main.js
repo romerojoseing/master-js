@@ -419,3 +419,154 @@ console.log(cadena_array);
 /*---------------------------------------- DOM en JS ----------------------------------------
 Document Object Model, que es donde podremos conectar con el HTML y modificarlos
 */
+
+var div = document.getElementsByTagName("div");             // Seleccionar por etiqueta
+var general = document.querySelector("div");
+
+var caja = document.getElementById("caja");                 // Seleccionar por ID
+var general = document.querySelector("#caja");
+
+var clase = document.getElementsByClassName("clase");       // Seleccionar por clase
+var general = document.querySelector(".clase");
+
+caja.innerHTML = "Texto cambiado";                          // Cambiar texto a HTMl desde JS
+caja.style.background = "blue";                             // Cambiar estios 
+
+
+// Conseguir elementos por su etiqueta
+var todosLosDivs = document.getElementsByTagName("div");
+var contenido = todosLosDivs[0].innerHTML;
+var valor;
+
+for(valor in todosLosDivs){
+    if(typeof todosLosDivs[valor].textContent == "string"){                         // Comprobar si es string
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode(todosLosDivs[valor].textContent);
+        parrafo.append(texto);                                                      //append Añade Antes - preprend Añade Despues
+        //document.querySelector("#section").append(parrafo);
+    }
+}
+
+console.log(contenido);
+console.log(todosLosDivs);
+
+
+// Conseguir todos los elementos por su clase
+var divRojos = document.getElementsByClassName("rojo");
+var divAmarillos = document.getElementsByClassName("amarillo");
+
+for(var div in divRojos || div in divAmarillos){
+    if(divRojos[div].className == "rojo"){                  // Comprobar que es la misma clase
+    divRojos[div].style.background = "red"; 
+    }
+}
+console.log(divRojos);                                      // Mostrar contenido por consola
+console.log(divAmarillos);                                  // Mostrar contenido por consola
+
+
+// Query Selector No muestra los arreglos completos ( Es mejor usar el class name o para ids en concretos)
+var id = document.querySelector("#encabezado");
+console.log(id);
+
+var claseRojo = document.querySelector(".rojo");
+console.log(claseRojo);
+
+
+/*---------------------------------------- BOM en JS ----------------------------------------
+Browser Object Model, Como puedo trabajar con los elementos del navegador, tamaños de la ventana, redirigir a URLs y demas
+*/
+
+// Ver que tamaño tiene la ventana
+function getBom(){
+    console.log(window.innerWidth);         // Ventana Visible
+    console.log(window.innerHeight);
+    console.log(screen.width);              // Screen Ventana Total
+    console.log(screen.height); 
+    console.log(window.location);           // Direccion de Archivo
+    console.log(window.location.href);      // Direccion de URL
+    };
+    
+    function redirect(url){                 // Redirigir a URL
+        window.location.href = url;
+    }
+    
+    function abrirVentana(url){             // Abrir nueva ventana
+        window.open(url);
+    }
+
+    getBom();
+
+
+/*---------------------------------------- Eventos en JS ----------------------------------------
+Son funciones que se ejecutan cuando ocurre algo.
+*/
+
+window.addEventListener("load", () => {         // Posponer la carga de los scripts para esperar que el html cargue completo
+
+    function cambiarColor(){
+        console.log("Me has dado Click");
+    
+        var bg = boton.style.background;  
+    
+        console.log(boton.style.background);
+    
+        if(bg == "green"){
+            boton.style.background = "red";
+        }else{
+            boton.style.background = "green";
+        }
+        
+        boton.style.padding = "10px";
+        boton.style.border = "1px solid #ccc";
+        
+        return true;     
+    }
+    
+    
+    // Manera de hacer lo mismo pero separando al maximo el codigo con el CLick
+    var boton = document.querySelector("#boton");
+    
+        boton.addEventListener("click", function(){
+        cambiarColor();
+        this.style.border = "10px solid black";
+        })
+    
+    
+    // Mouse Over
+        boton.addEventListener("mouseover", function(){
+        boton.style.background = "#ccc"
+        });
+    
+        boton.addEventListener("mouseout", function(){
+        boton.style.background = "blue"
+        });
+    
+    
+    // Focus
+    var input = document.querySelector("#nombre");
+        input.addEventListener("focus", function(){
+        console.log("[Focus] Estas dentro del Input");
+        });
+    
+    // Blur
+        input.addEventListener("blur", function(){
+        console.log("[Blur] Estas fuera del Input");
+        });
+    
+    // Keydown
+        input.addEventListener("keydown", function(event){
+        console.log("[Keydown] Estas pulsando la tecla: ", String.fromCharCode(event.keyCode));
+        });
+    
+    // Keypress
+        input.addEventListener("keypress", function(event){
+        console.log("[Keypress] Presionaste la tecla: ", String.fromCharCode(event.keyCode));
+        });
+    
+    // Keyup
+        input.addEventListener("keyup", function(event){
+        console.log("[Keypress] Soltaste la tecla: ", String.fromCharCode(event.keyCode));
+        });
+
+});
+
